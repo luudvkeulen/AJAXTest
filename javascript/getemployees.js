@@ -6,7 +6,7 @@ $(document).ready(function() {
             data: "",
             dataType: 'json',
             success: function(data){
-                $('#results').clear;
+                $('#results').empty();
                 for(var i in data) {
                     var fname = data[i]['firstname'];
                     var lname = data[i]['lastname'];
