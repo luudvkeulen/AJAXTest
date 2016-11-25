@@ -6,10 +6,11 @@ $(document).ready(function() {
             data: "",
             dataType: 'json',
             success: function(data){
-                var html, comment;
-                for(var i = 0; i < data.length; i++) {
-                    comment = data[i];
-                    html += '<p>' + comment.firstname
+                $('#results').clear;
+                for(var i in data) {
+                    var fname = data[i]['firstname'];
+                    var lname = data[i]['lastname'];
+                    $('#results').append(fname + " " + lname + "<br/>");
                 }
             }
         })
